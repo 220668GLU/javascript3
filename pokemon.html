@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokemon</title>
+    <link
+      rel="shortcut icon"
+      href="assets/Poke_Ball.png"
+      type="image/png"
+    />
+</head>
+<body>
+    <div>
+        <img id="trainer" src="assets/trainer.png" alt="stef" style="height: 290px; position: fixed; bottom: 450px; right: 600px; z-index: 1;">   
+        <img id="character" src="assets/empty.png" alt="pikachu" style="height: 190px; position: fixed; bottom: 350px; right: 870px; z-index: 1;">
+        <img src="assets/battle.jpg" alt="battle" style="height: 500px; position: fixed; right: 20px; bottom: 250px;">
+        <div id="health1" style="height: 190px; position: fixed; bottom: 400px; right: 990px; z-index: 1; color: white;"> HP: -/-</div>
+        <div id="health4" style="height: 190px; position: fixed; bottom: 540px; right: 550px; z-index: 1; color: white;"> HP: 45/45</div>
+        <button onclick="attack1()" id="attack1" style="position: fixed; right: 1420px; width: 105px;  bottom: 200px;"></button>
+        <button id="attack2" style="position: fixed; right: 1325px; width: 90px;  bottom: 200px;"></button>
+        <button id="attack3" style="position: fixed; right: 1220px; width: 100px; bottom: 200px;"></button>
+        <button onclick="pikachu()" style="position: fixed; right:1470px ; width: 60px; bottom: 100px;">Pikachu</button>
+        <button onclick="squirtle()" style="position: fixed; right:1400px ; width: 60px; bottom: 100px;">squirtle</button>
+        <button onclick="charmander()" style="position: fixed; right:1300px ; width: 90px; bottom: 100px;">charmander</button>
+        <div id="text" style=" color: white; position: fixed; right:700px ; width: 90px; bottom: 250px; z-index: 1;">test</div>
+    </div>
+    <script>
+        var pikachuhealth = 35;
+        var squirtlehealth = 44;
+        var charmanderhealth = 39;
+        var haunterhealth = 45;
+        
+function pikachu(){
+    let character = document.getElementById("character");
+    character.setAttribute("src","assets/pikachu.png"); 
+    let attack1 = "Thundershock";
+    document.getElementById("attack1").innerHTML = attack1;
+    let attack2 = "Quick attack";
+    document.getElementById("attack2").innerHTML = attack2;
+    let attack3 = "Iron tail";
+    document.getElementById("attack3").innerHTML = attack3;
+    let health1 = "HP: " + pikachuhealth + "/35";
+    document.getElementById("health1").innerHTML = health1;
+}
+function squirtle(){
+        let character = document.getElementById("character");
+        character.setAttribute("src","assets/squirtle.png"); 
+        let attack1 = "Tackle";
+        document.getElementById("attack1").innerHTML = attack1;
+        let attack2 = "Water gun";
+        document.getElementById("attack2").innerHTML = attack2;
+        let attack3 = "Rapid spin";
+        document.getElementById("attack3").innerHTML = attack3;
+        let health2 = "HP: " + squirtlehealth + "/44";
+        document.getElementById("health1").innerHTML = health2;
+    }
+    function charmander(){
+        let character = document.getElementById("character");
+        character.setAttribute("src","assets/charmander.png"); 
+        let attack1 = "Scratch";
+        document.getElementById("attack1").innerHTML = attack1;
+        let attack2 = "Ember";
+        document.getElementById("attack2").innerHTML = attack2;
+        let attack3 = "Smokescreen";
+        document.getElementById("attack3").innerHTML = attack3;
+        let health3 = "HP: " + charmanderhealth + "/39";
+        document.getElementById("health1").innerHTML = health3;
+    }
+    function attack1(){
+        var attack = document.getElementById("attack1").innerHTML;
+        console.log(attack);
+        
+        if (attack === undefined){
+            console.log("undefined");
+        }
+        if (attack == "Thundershock"){
+                if (haunterhealth == 0){
+                var trainer = document.getElementById("trainer").src;
+                console.log(trainer);
+                haunterhealth = haunterhealth = 0;
+                console.log(haunterhealth);
+                let health4 = "HP: " + haunterhealth + "/45";
+                document.getElementById("health4").innerHTML = health4;
+                    if (trainer === undefined){
+                        console.log("undefined")
+                    }
+                    if (trainer == "http://localhost/javascript%203/javascript3/assets/trainer.png"){
+                        let trainer = document.getElementById("trainer");
+                        trainer.setAttribute("src","assets/trainer2.png"); 
+                        haunterhealth = 45;
+                        document.getElementById("assets/health4").innerHTML = "HP: 45/45";
+                    }
+                    if (trainer == "http://localhost/javascript%203/javascript3/assets/trainer2.png"){
+                        let trainer = document.getElementById("trainer");
+                        trainer.setAttribute("src","assets/trainer3.png"); 
+                        haunterhealth = 45;
+                        let health4 = "HP: " + haunterhealth + "/45";
+                        document.getElementById("health4").innerHTML = health4;
+                    }
+                    if (trainer == "http://localhost/javascript%203/javascript3/assets/trainer3.png"){
+                        let text = "You have defeated the trainer!!";
+                        document.getElementById("text").innerHTML = text;
+                    }
+
+
+        }else{
+                        haunterhealth = haunterhealth - 5;
+                        console.log(haunterhealth);
+                        let health4 = "HP: " + haunterhealth + "/45";
+                        document.getElementById("health4").innerHTML = health4;
+                }
+        }
+       
+    }
+
+    </script>
+</body>
+</html5
