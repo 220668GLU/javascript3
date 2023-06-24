@@ -9,6 +9,7 @@ function attack1(){
         document.getElementById("health4").innerHTML  = text;
         console.log(text);
         alert("Haunter has fainted. You won!");
+        location.reload();
     } else {
         let Thundershock = Math.floor(Math.random() * 5) + 1;
         console.log(Thundershock);
@@ -18,7 +19,7 @@ function attack1(){
             setTimeout(()=> {
                 trainerattack();
              }
-             ,2000);
+             ,1000);
         } 
         if (Thundershock == 2){
             document.getElementById("text").innerHTML = "You used Thunderhock and did 0 damage.";
@@ -26,7 +27,7 @@ function attack1(){
             setTimeout(()=> {
                 trainerattack();
              }
-             ,2000);
+             ,1000);
         } 
         if (Thundershock == 3){
             document.getElementById("text").innerHTML = "You used Thunderhock and did 0 damage.";
@@ -34,7 +35,7 @@ function attack1(){
             setTimeout(()=> {
                 trainerattack();
              }
-             ,2000);
+             ,1000);
         } 
         if (Thundershock == 4){
             document.getElementById("text").innerHTML = "You used Thundershock and did 4 damage.";
@@ -45,7 +46,7 @@ function attack1(){
             setTimeout(()=> {
                 trainerattack();
              }
-             ,2000);
+             ,1000);
         } 
         if (Thundershock == 5){
             document.getElementById("text").innerHTML = "You used Thundershock and did 5 damage.";
@@ -56,7 +57,7 @@ function attack1(){
             setTimeout(()=> {
                 trainerattack();
              }
-             ,2000);
+             ,1000);
         } 
         
    
@@ -70,10 +71,9 @@ function attack2(){
         document.getElementById("health4").innerHTML  = text;
         console.log(text);
         alert("Haunter has fainted. You won!");
-        
+        location.reload();
     } else {
         let Quickatt = Math.floor(Math.random() * 5) + 1;
-        console.log(Quickatt);
         if (Quickatt == 1){
             document.getElementById("text").innerHTML = "You used Quick Attack and did 1 damage.";
             haunterhealth = haunterhealth - 1;
@@ -83,7 +83,7 @@ function attack2(){
             setTimeout(()=> {
                 trainerattack();
              }
-             ,2000);
+             ,1000);
         } 
         if (Quickatt == 2){
             document.getElementById("text").innerHTML = "You used Quick Attack and did 1 damage.";
@@ -94,7 +94,7 @@ function attack2(){
             setTimeout(()=> {
                 trainerattack();
              }
-             ,2000);
+             ,1000);
         } 
         if (Quickatt == 3){
             document.getElementById("text").innerHTML = "You used Quick Attack and did 2 damage.";
@@ -105,7 +105,7 @@ function attack2(){
             setTimeout(()=> {
                 trainerattack();
              }
-             ,2000);
+             ,1000);
         } 
         if (Quickatt == 4){
             document.getElementById("text").innerHTML = "You used Quick Attack and did 2 damage.";
@@ -116,7 +116,7 @@ function attack2(){
             setTimeout(()=> {
                 trainerattack();
              }
-             ,2000);
+             ,1000);
         } 
         if (Quickatt == 5){
             document.getElementById("text").innerHTML = "You used Quick Attack and did 2 damage.";
@@ -127,7 +127,7 @@ function attack2(){
             setTimeout(()=> {
                 trainerattack();
              }
-             ,2000);
+             ,1000);
         } 
     }
 }   
@@ -139,16 +139,16 @@ function attack3(){
         document.getElementById("health4").innerHTML  = text;
         console.log(text);
         alert("Haunter has fainted. You won!");
+        location.reload();
     } else {
         let Iron = Math.floor(Math.random() * 5) + 1;
-        console.log(Iron);
         if (Iron == 1){
             document.getElementById("text").innerHTML = "You used Iron Tail and did 0 damage.";
             console.log(text);
             setTimeout(()=> {
                 trainerattack();
              }
-             ,2000);
+             ,1000);
         } 
         if (Iron == 2){
             document.getElementById("text").innerHTML = "You used Iron Tail and did 0 damage.";
@@ -156,7 +156,7 @@ function attack3(){
             setTimeout(()=> {
                 trainerattack();
              }
-             ,2000);
+             ,1000);
         } 
         if (Iron == 3){
             document.getElementById("text").innerHTML = "You used Iron Tail and did 2 damage.";
@@ -167,7 +167,7 @@ function attack3(){
             setTimeout(()=> {
                 trainerattack();
              }
-             ,2000);
+             ,1000);
         } 
         if (Iron == 4){
             document.getElementById("text").innerHTML = "You used Iron Tail and did 3 damage.";
@@ -178,7 +178,7 @@ function attack3(){
             setTimeout(()=> {
                 trainerattack();
              }
-             ,2000);
+             ,1000);
         } 
         if (Iron == 5){
             document.getElementById("text").innerHTML = "You used Iron Tail and did 4 damage.";
@@ -189,7 +189,7 @@ function attack3(){
             setTimeout(()=> {
                 trainerattack();
              }
-             ,2000);
+             ,1000);
         } 
     }
 }
@@ -202,12 +202,11 @@ function attack3(){
         document.getElementById("health1").innerHTML  = text;
         console.log(text);
         alert("Pikachu has fainted. You Lose!");
+        location.reload();
         }
         let number = Math.floor(Math.random() * 3) + 1;
-        console.log("rand num", number);
         if (number == 1){
             let Lick = Math.floor(Math.random() * 5) + 1;
-            console.log("lick");
             if (Lick == 1){
                 document.getElementById("text").innerHTML = "The trainer used Lick and did 1 damage.";
                 pikachuhealth = pikachuhealth - 1;
@@ -267,11 +266,11 @@ function attack3(){
                 pikachuhealth = pikachuhealth - 9;
                 let text = "HP: " + pikachuhealth + "/35"; 
                 document.getElementById("health1").innerHTML  = text;
+                console.log(text);
             } 
         }
         if (number == 3){
             let sockerpunch = Math.floor(Math.random() * 7) + 1;
-            console.log(sockerpunch);
             if (sockerpunch == 1){
                 document.getElementById("text").innerHTML  = "The trainer used Socker Punch and did 0 damage.";
             } 
