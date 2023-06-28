@@ -12,9 +12,8 @@ try {
 
     $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
   
-echo json_encode($results);
-}
-    catch(PDOException $e) {
+    echo json_encode($results);
+}catch(PDOException $e) {
     echo json_encode('[{"name":"error","msg":"' . $e->getMessage() . '"}]');
 }
 

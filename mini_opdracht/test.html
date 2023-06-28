@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enter Your Name</title>
+</head>
+<body>
+  <script>
+    function saveName(name, wins) {
+      console.log("1");
+      const data = { "name": name, "wins": wins };
+      console.log("Data:", data);
+      fetch('test.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+        
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Success:', data);
+      })
+      .catch((error) => {
+        console.log('Error:', error);
+      });
+    }
+
+    function handleButtonClick() {
+      var name = prompt("Please enter your name:");
+      saveName(name, 2);
+    }
+  </script>
+
+  <button onclick="handleButtonClick()">Save Name</button>
+</body>
+</html>
